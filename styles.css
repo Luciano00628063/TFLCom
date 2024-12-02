@@ -41,6 +41,10 @@ button {
     background-color: #f9f9f9;
     font-family: monospace;
     white-space: pre-wrap; /* Asegura que los diccionarios se vean bien */
+    max-height: 200px; /* Altura máxima del contenedor */
+    overflow-y: auto; /* Barra de desplazamiento vertical si es necesario */
+    border-radius: 8px; /* Bordes redondeados para mejorar la estética */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle estilo */
 }
 
 table {
