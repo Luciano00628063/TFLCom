@@ -1,0 +1,186 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.result-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.result {
+    width: 48%; /* Ajusta el ancho según sea necesario */
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.diccionario {
+    display: none; /* Por defecto ocultamos los diccionarios */
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    font-family: monospace;
+    white-space: pre-wrap; /* Asegura que los diccionarios se vean bien */
+}
+
+table {
+    width: 100%;
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+#huffmanResult,
+#lzwResult {
+    word-wrap: break-word; /* Permite partir palabras largas */
+    overflow-wrap: break-word; /* Compatibilidad adicional para navegadores modernos */
+    overflow-x: auto; /* Añade un desplazamiento horizontal si es necesario */
+    max-width: 100%; /* Asegura que no supere el tamaño del contenedor padre */
+    padding: 10px; /* Espaciado interno para mejor visualización */
+    border: 1px solid #ccc; /* Opcional, para diferenciar los contenedores */
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Fondo claro */
+}
+
+.truncate {
+    overflow: hidden; /* Oculta contenido excedente */
+    /*text-overflow: ellipsis; /* Agrega puntos suspensivos (...) para texto truncado */
+    white-space: nowrap; /* Mantiene el texto en una sola línea */
+    width: 100%; /* Asegura que el ancho se ajuste al contenedor */
+    display: inline-block; /* Evita comportamientos inesperados del ancho */
+    box-sizing: border-box; /* Incluye padding y borde dentro del ancho total */
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 220px;
+}
+
+.left-panel {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.right-panel {
+    flex: 1;
+    background-color: #fff3cd;
+    padding: 15px;
+    border: 1px solid #fffeba;
+    color: #674e03;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+textarea {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 10px;
+    resize: none;
+}
+
+.info-compresion {
+    margin-top: 10px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+#comparativaContainer {
+    display: flex;
+    flex-direction: column; /* Asegura que el título esté arriba y los gráficos abajo */
+    align-items: center; /* Centra todo horizontalmente */
+    gap: 20px; /* Espaciado entre el título y los gráficos */
+    max-width: 80%;
+    margin: 0 auto; /* Centra el contenedor dentro de la página */
+}
+
+#comparativaTitle {
+
+    text-align: center; /* Centra el texto dentro de su propio ancho */
+    font-size: 1.8rem; /* Tamaño del texto */
+    margin: 0; /* Quita márgenes extra si los hay */
+    margin-top: 20px;
+}
+
+#comparativaCharts {
+    margin-top: 0px;
+    display: flex; /* Muestra los gráficos uno al lado del otro */
+    justify-content: center;
+    gap: 20px;
+    /*width: 100%;*/
+    width: 400px;
+    height: 200px; /* Ajusta el tamaño máximo de los gráficos */
+}
+
+#comparativaContainer canvas {
+    width: 200px; /* Ancho de los gráficos */
+    height: 150px; /* Alto de los gráficos */
+}
+
+/* Estilos para el contenedor de Resultado Huffman */
+#huffmanContainer {
+    background-color: #d4edda; /* Verde suave */
+    border: 1px solid #c3e6cb; /* Borde verde */
+    color: #155724; /* Texto verde oscuro */
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el contenedor de Resultado LZW */
+#LZWContainer {
+    background-color: #d1ecf1; /* Azul suave */
+    border: 1px solid #bee5eb; /* Borde azul */
+    color: #0c5460; /* Texto azul oscuro */
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#pageWrapper {
+    margin: 40px auto; /* Márgenes superiores e inferiores de 40px, centrado horizontal */
+    padding: 20px; /* Espaciado interno */
+    max-width: 1300px; /* Ancho máximo de la página */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+    border: 1px solid #ddd; /* Borde opcional */
+    border-radius: 8px; /* Esquinas redondeadas opcionales */
+    background-color: #f9f9f9; /* Fondo suave opcional */
+}

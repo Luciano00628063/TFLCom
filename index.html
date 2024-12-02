@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compresor de Huffman y LZW</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #huffmanResult,
+        #lzwResult {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            overflow-x: auto;
+            max-width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        </style>    
+</head>
+<body>
+    <div id="pageWrapper">
+        <h1>Compresor de Huffman y LZW</h1>
+        <div class="container">
+            <!-- Contenedor izquierdo -->
+            <div class="left-panel">
+                <textarea id="inputText" placeholder="Ingrese el texto aquí..."></textarea>
+                <button onclick="compressText()">Comprimir</button>
+                <button onclick="generarComparativa()">Comparativa</button>
+            </div>
+            <!-- Contenedor derecho -->
+            <div class="right-panel">
+                <h2>Información de la cadena:</h2>
+                <p id="charCount">Cantidad de caracteres: 0</p>
+                <p id="asciiBits">Bits necesarios en ASCII: 0</p>
+            </div>
+        </div>
+
+        <!-- Contenedor para gráficos comparativos -->
+        <div id="comparativaContainer" style="display: none;">
+            <h2 id="comparativaTitle">Comparativa entre Huffman y LZW</h2>
+            <div id="comparativaCharts">
+                <canvas id="tasaCompresionChart" width="400" height="200"></canvas></canvas>
+                <canvas id="tamanoDiccionarioChart"></canvas>
+                <canvas id="longitudCadenaChart"></canvas>
+            </div>
+        </div>
+
+        <div class="result-container">
+            <div id="huffmanContainer" class="result">
+                <h2>Resultado Huffman:</h2>
+                <p id="huffmanResult" class="truncate"></p>
+                <button id="toggleHuffman" onclick="toggleVisibility('huffmanResult', 'toggleHuffman')">Ver completo</button>
+                <button onclick="mostrarDiccionarioHuffman()">Ver Diccionario</button>
+                <button onclick="mostrarInfoCompresionHuffman()">Info Compresión</button>
+                <div id="diccionarioHuffman" class="diccionario"></div>
+                <div id="infoCompresionHuffman" class="info-compresion" style="display: none;"></div>
+            </div>
+            <div id="LZWContainer" class="result">
+                <h2>Resultado LZW:</h2>
+                <p id="lzwResult" class="truncate"></p>
+                <button id="toggleLZW" onclick="toggleVisibility('lzwResult', 'toggleLZW')">Ver completo</button>
+                <button id="toggleLZWDictionary" onclick="mostrarDiccionarioLZW()">Ver Diccionario</button>
+                <button onclick="mostrarInfoCompresionLZW()">Info Compresión</button>
+                <div id="diccionarioLZW" class="diccionario"></div>
+                <div id="infoCompresionLZW" class="info-compresion" style="display: none;"></div>
+            </div>
+        </div>
+        
+        <script src="scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <div>
+</body>
+
+</html>
+
+
