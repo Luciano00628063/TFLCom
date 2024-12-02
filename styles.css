@@ -75,10 +75,19 @@ th {
     background-color: #f9f9f9; /* Fondo claro */
 }
 
+/* Clase para truncar y permitir desplazamiento horizontal */
 .truncate {
     overflow: hidden; /* Oculta contenido excedente */
-    /*text-overflow: ellipsis; /* Agrega puntos suspensivos (...) para texto truncado */
     white-space: nowrap; /* Mantiene el texto en una sola línea */
+    width: 100%; /* Asegura que el ancho se ajuste al contenedor */
+    display: inline-block; /* Evita comportamientos inesperados del ancho */
+    box-sizing: border-box; /* Incluye padding y borde dentro del ancho total */
+}
+
+/* Clase para permitir desplazamiento vertical */
+.scroll-vertical {
+    overflow-y: auto; /* Permite desplazamiento vertical */
+    max-height: 200px; /* Ajusta la altura máxima según lo necesites */
     width: 100%; /* Asegura que el ancho se ajuste al contenedor */
     display: inline-block; /* Evita comportamientos inesperados del ancho */
     box-sizing: border-box; /* Incluye padding y borde dentro del ancho total */

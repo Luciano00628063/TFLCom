@@ -208,12 +208,15 @@ function toggleVisibility(elementId, buttonId) {
     const element = document.getElementById(elementId);
     const button = document.getElementById(buttonId);
 
+    // Alternar entre la clase truncate y scroll-vertical
     if (element.classList.contains("truncate")) {
-        // Mostrar el contenido completo
+        // Mostrar el contenido completo con scroll vertical
         element.classList.remove("truncate");
+        element.classList.add("scroll-vertical");
         button.textContent = "Ver menos";
     } else {
-        // Volver a truncar el contenido
+        // Volver a truncar el contenido (sin scroll)
+        element.classList.remove("scroll-vertical");
         element.classList.add("truncate");
         button.textContent = "Ver completo";
     }
