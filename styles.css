@@ -4,6 +4,51 @@ body {
     line-height: 1.6;
 }
 
+/* Barra superior */
+#topBar {
+    background-color: #f8d7da; /* Color similar a la imagen */
+    color: #333;
+    padding: 10px 15px; /* Ajustar el padding superior/inferior */
+    border-radius: 20px 20px 20px 20px; /* Bordes redondeados en la parte superior */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    height: auto; /* Asegura que la altura del contenedor se ajuste automáticamente */
+}
+
+#topBar .left {
+    display: flex;
+    align-items: center;
+}
+
+#topBar .left img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+#topBar .center {
+    text-align: center;
+    font-size: 18px;
+    margin: 0; /* Elimina el margen por defecto de los h1 y h2 */
+}
+
+
+#topBar h1 {
+    margin-bottom: 5px; /* Agrega un pequeño margen entre el título y el subtítulo */
+}
+
+#topBar h2 {
+    margin-top: 0; /* Elimina el margen superior en el subtítulo */
+    margin-bottom: 0; /* Elimina el margen inferior */
+}
+
+#topBar .right {
+    text-align: right;
+    margin-top: auto;
+    font-size: 14px;
+}
+
 textarea {
     width: 100%;
     height: 100px;
