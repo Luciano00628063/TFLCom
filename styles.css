@@ -14,7 +14,7 @@ body {
     justify-content: space-between;
     align-items: center;
     font-family: Arial, sans-serif;
-    height: auto; /* Asegura que la altura del contenedor se ajuste automáticamente */
+    height: 140px; /* Asegura que la altura del contenedor se ajuste automáticamente */
 }
 
 #topBar .left {
@@ -23,8 +23,17 @@ body {
 }
 
 #topBar .left img {
-    height: 40px;
-    margin-right: 10px;
+    height: 80px;
+    margin-left: 10px;
+    margin-right: 15px;
+}
+
+#topBar .left span:first-child {
+    font-size: 24px; /* Tamaño de "FRT - UTN" */
+}
+
+#topBar .left span:last-child {
+    font-size: 18px; /* Tamaño de "Comunicaciones" */
 }
 
 #topBar .center {
